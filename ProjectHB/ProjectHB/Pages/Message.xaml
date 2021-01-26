@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectHB.Pages.Message"
+             Title="Message">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lv" SeparatorColor="Gray" SelectionMode="None" RowHeight="30" ItemTapped="lv_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="15,0">
+                                <Label Text="{Binding MsgContent}" FontSize="Large"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Entry 
+            x:Name="messageEntry"
+            Placeholder="Enter Your message..."
+            />
+            <Button 
+            Text="Add"
+            Clicked="Button_Clicked"
+            />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
